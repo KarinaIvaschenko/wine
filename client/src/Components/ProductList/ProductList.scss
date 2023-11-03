@@ -1,0 +1,38 @@
+.product-list {
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 70px;
+  max-width: 1280px;
+  box-sizing: border-box;
+  padding-left: 76px;
+  padding-right: 76px;
+
+  &__filter-block {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    min-width: 216px;
+    width: 216px;
+    max-width: 216px;
+  }
+
+  &__products {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 48px 24px;
+    justify-content: space-evenly;
+  }
+
+  &__sorting {
+    text-align: right;
+  }
+}
