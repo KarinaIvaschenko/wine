@@ -21,7 +21,6 @@ function ProductPage({ id }) {
   const [cart, setCart] = useState(false)
 
   const basketList = useSelector((state) => state.cart.cart)
-  console.log(basketList)
 
   useEffect(() => {
     basketList.forEach((item) => {
@@ -51,7 +50,7 @@ function ProductPage({ id }) {
   }
 
   const request = async () => {
-    const { data } = await axios.get(`http://localhost:4000/api/products/${id}`)
+    const { data } = await axios.get(`https://wine-3qu5.vercel.app/api/products/${id}`)
     return data
   }
 
