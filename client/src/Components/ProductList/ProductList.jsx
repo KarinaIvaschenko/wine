@@ -13,7 +13,7 @@ function ProductList() {
   const [productsQuantity, setProductsQuantity] = useState(0)
   const [isLoad, setIsLoad] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
-  const [queryParams, setQueryParams] = useState({ perPage: 10, startPage: 1 })
+  const [queryParams, setQueryParams] = useState({ perPage: 12, startPage: 1 })
 
   let queryParamsString = ''
   if (initialQueryString.length > 0) {
@@ -30,7 +30,7 @@ function ProductList() {
       }
     })
 
-    fetch(`wine-3qu5.vercel.app/api/products/filter${queryParamsString}`)
+    fetch(`wine-3qu5-7mi503bt5-karynas-projects.vercel.app/api/products/filter${queryParamsString}`)
       .then((res) => res.json())
       .then(
         (result) => {
