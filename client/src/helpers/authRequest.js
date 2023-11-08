@@ -14,7 +14,7 @@ export default class AuthRequest {
       redirect: 'follow',
     }
 
-    return fetch('https://wine-3qu5.vercel.app/api/customers/login', requestOptions)
+    return fetch('wine-3qu5-7mi503bt5-karynas-projects.vercel.app/api/customers/login', requestOptions)
       .then((res) => res.json())
       .then((result) => result)
   }
@@ -36,7 +36,7 @@ export default class AuthRequest {
       redirect: 'follow',
     }
 
-    fetch('https://wine-3qu5.vercel.app/api/customers', requestOptions)
+    fetch('wine-3qu5-7mi503bt5-karynas-projects.vercel.app/api/customers', requestOptions)
       .then((res) => res.json())
       .then((result) => {
         console.log(result)

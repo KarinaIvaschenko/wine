@@ -50,7 +50,7 @@ function ProductPage({ id }) {
   }
 
   const request = async () => {
-    const { data } = await axios.get(`https://wine-3qu5.vercel.app/api/products/${id}`)
+    const { data } = await axios.get(`wine-3qu5-7mi503bt5-karynas-projects.vercel.app/api/products/${id}`)
     return data
   }
 
