@@ -30,7 +30,7 @@ function ProductList() {
       }
     })
 
-    fetch(`wine-3qu5-7mi503bt5-karynas-projects.vercel.app/api/products/filter${queryParamsString}`)
+    fetch(`https://wine-3qu5-b7ctjlgcn-karynas-projects.vercel.app/api/products/filter${queryParamsString}`)
       .then((res) => res.json())
       .then(
         (result) => {
