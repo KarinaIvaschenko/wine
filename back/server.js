@@ -51,7 +51,7 @@ require("./config/passport")(passport);
 // Use Routes
 app.use(
     cors({
-        origin: "*",
+        origin: "https://wine-6zcshsngv-karynas-projects.vercel.app/",
         optionsSuccessStatus: 200,
     })
 );
