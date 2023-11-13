@@ -15,12 +15,9 @@
   padding-right: 76px;
 
   &__filter-block {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
     min-width: 216px;
     width: 216px;
-    max-width: 216px;
+    margin: 0 auto;
   }
 
   &__products {
@@ -34,5 +31,9 @@
 
   &__sorting {
     text-align: right;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 40px;
   }
 }
