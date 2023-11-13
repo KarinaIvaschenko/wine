@@ -1,3 +1,3 @@
-const urlRequest = 'https://wine-e6k21g7xr-karynas-projects.vercel.app/api'
+const urlRequest = 'https://wine-3qu5.vercel.app/api'
 
 export default urlRequest
