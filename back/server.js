@@ -49,12 +49,7 @@ app.use(passport.initialize());
 require("./config/passport")(passport);
 
 // Use Routes
-app.use(
-    cors({
-        origin: "https://wine-6zcshsngv-karynas-projects.vercel.app/",
-        optionsSuccessStatus: 200,
-    })
-);
+app.use(cors());
 // app.use('/api', createProxyMiddleware({ target: 'http://blackoutstore-be-iota.vercel.app', changeOrigin: true }));
 app.use("/api/configs", globalConfigs);
 app.use("/api/customers", customers);
