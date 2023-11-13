@@ -6,6 +6,7 @@ import FilterPanel from './components/FilterPanel'
 import SortingPanel from './components/SortingPanel'
 import Loader from '../Loader'
 import PaginationPanel from './components/PaginationPanel'
+import urlRequest from '../../helpers/costants/baseUrl'
 
 function ProductList() {
   const initialQueryString = window.location.search
@@ -30,7 +31,7 @@ function ProductList() {
       }
     })
 
-    fetch(`https://wine-3qu5-b7ctjlgcn-karynas-projects.vercel.app/api/products/filter${queryParamsString}`)
+    fetch(`${urlRequest}/products/filter${queryParamsString}`)
       .then((res) => res.json())
       .then(
         (result) => {

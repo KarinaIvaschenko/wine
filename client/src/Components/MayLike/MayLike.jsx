@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom'
 import ProductCard from '../ProductCard'
 import Loader from '../Loader'
 import NotFoundPage from '../../Pages/404Page/404Page'
+import urlRequest from '../../helpers/costants/baseUrl'
 import './MayLike.scss'
 
 function MayLike() {
@@ -14,7 +15,7 @@ function MayLike() {
   const [productThree, setProductThree] = useState(null)
 
   const request = async () => {
-    const { data } = await axios.get('http://localhost:4000/api/products/filter?perPage=3')
+    const { data } = await axios.get(`${urlRequest}/products/filter?perPage=3`)
     return data
   }
 

@@ -5,9 +5,9 @@ import { useDispatch } from 'react-redux'
 import axios from 'axios'
 import Button from '../Button'
 import { actionAddToCart } from '../../redux/cart/actionCart'
+import urlRequest from '../../helpers/costants/baseUrl'
 
 function ProductCard({ itemNo, name, variety, region, country, imageUrls, currentPrice, previousPrice, discount }) {
-
   const dispatch = useDispatch()
 
   let isDiscounted = false
@@ -16,13 +16,13 @@ function ProductCard({ itemNo, name, variety, region, country, imageUrls, curren
     isDiscounted = true
     productCardPriceClassName += ' discounted'
   }
-    
-  const addToCart = async () => {
-    const { data } = await axios.get(`http://localhost:4000/api/products/${itemNo}`);
 
-    dispatch(actionAddToCart({ ...data, quant: 1 }));
-};
-  
+  const addToCart = async () => {
+    const { data } = await axios.get(`${urlRequest}/products/${itemNo}`)
+
+    dispatch(actionAddToCart({ ...data, quant: 1 }))
+  }
+
   return (
     <li key={itemNo} className="product-card">
       <div className="product-card__image">

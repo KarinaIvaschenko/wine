@@ -14,6 +14,7 @@ import './ProductPage.scss'
 import { useDispatch, useSelector } from 'react-redux'
 import { actionAddToCart, actionDecreaseQuantity, actionIncreaseQuantity } from '../../redux/cart/actionCart'
 import Button from '../../Components/Button'
+import urlRequest from '../../helpers/costants/baseUrl'
 
 function ProductPage({ id }) {
   const [product, setProduct] = useState({})
@@ -50,7 +51,7 @@ function ProductPage({ id }) {
   }
 
   const request = async () => {
-    const { data } = await axios.get(`https://wine-3qu5-b7ctjlgcn-karynas-projects.vercel.app/api/products/${id}`)
+    const { data } = await axios.get(`${urlRequest}/products/${id}`)
     return data
   }
 

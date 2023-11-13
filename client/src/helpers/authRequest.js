@@ -1,3 +1,5 @@
+import urlRequest from './costants/baseUrl'
+
 export default class AuthRequest {
   // eslint-disable-next-line consistent-return
   static async login(email, password) {
@@ -36,7 +38,7 @@ export default class AuthRequest {
       redirect: 'follow',
     }
 
-    fetch('wine-3qu5-7mi503bt5-karynas-projects.vercel.app/api/customers', requestOptions)
+    fetch(`${urlRequest}/customers`, requestOptions)
       .then((res) => res.json())
       .then((result) => {
         console.log(result)
