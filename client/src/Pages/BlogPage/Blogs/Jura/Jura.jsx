@@ -1,6 +1,11 @@
+import { useEffect } from 'react'
 import '../Blogs.scss'
 
 function Jura() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div className="container blog">
       <h1 className="blog__title">Jura</h1>
