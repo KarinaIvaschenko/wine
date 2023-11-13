@@ -9,12 +9,12 @@
   align-items: center;
   border-bottom: 1px solid black;
   box-sizing: border-box;
-    @media screen and (max-width: 992px) {
+  @media screen and (max-width: 992px) {
     height: 120px;
-    }
-    @media screen and (min-width: 320px) and (max-width: 768px) {
-      padding: 30px;
-    }
+  }
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    padding: 30px;
+  }
 }
 
 // NAVIGATION WITH MAIN LINKS
@@ -45,7 +45,6 @@
   @media screen and (max-width: 992px) {
     display: none;
   }
-
 }
 
 // Burger
@@ -64,7 +63,7 @@
   width: 2.5em;
   height: 2.5em;
   cursor: pointer;
-  transition: all .3s;
+  transition: all 0.3s;
   &:hover {
     border: 1px solid white;
   }
@@ -78,42 +77,40 @@
     transition: 0.3s ease;
   }
   position: relative;
-  }
-  
-  .burger-menu.checked{
-    & .burger-menu__item1{
-      transform: translateY(350%)rotate(45deg);
-      width: 25px;
-    }
-    
-  
-    & .burger-menu__item2{
-      transform: translateX(-20px);
-      opacity: 0;
-    }
-  
-    & .burger-menu__item3{
-      transform: translateY(-200%) rotate(-45deg);
-      width: 25px;
-    }
-  }
-  // End Burger
+}
 
-// Extended Menu for Burger 
+.burger-menu.checked {
+  & .burger-menu__item1 {
+    transform: translateY(350%) rotate(45deg);
+    width: 25px;
+  }
+
+  & .burger-menu__item2 {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+
+  & .burger-menu__item3 {
+    transform: translateY(-200%) rotate(-45deg);
+    width: 25px;
+  }
+}
+// End Burger
+
+// Extended Menu for Burger
 
 .menu-extended {
-  @media screen and (min-width: 320px) and (max-width: 768px){
+  @media screen and (min-width: 320px) and (max-width: 768px) {
     display: flex;
     flex-direction: column;
     position: absolute;
     justify-content: space-evenly;
     gap: 5px;
-    width: 100vw;
     height: 450px;
     top: 60px;
-    right: -120px;
-    z-index: 100;
-    transition: .5s ease-in-out;
+    left: 0;
+    z-index: 2;
+    transition: 0.5s ease-in-out;
     border: 1px solid #e8e8e8;
     background: #ffffff;
     cursor: pointer;
@@ -131,7 +128,7 @@
     }
   }
 
-  @media screen and (min-width: 768px) and (max-width: 992px){
+  @media screen and (min-width: 768px) and (max-width: 992px) {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -140,9 +137,9 @@
     width: 100vw;
     height: 450px;
     top: 60px;
-    right: -162px;
-    z-index: 100;
-    transition: .5s ease-in-out;
+    left: 0;
+    z-index: 2;
+    transition: 0.5s ease-in-out;
     border: 1px solid #e8e8e8;
     background: #ffffff;
     cursor: pointer;
@@ -158,9 +155,8 @@
         box-sizing: border-box;
       }
     }
+  }
 }
-}
-
 
 .item__link {
   text-decoration: none;
